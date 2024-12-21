@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ant Design Custom Theme Variables */
+:root {
+  --primary-color: #4175DD;
+  --link-color: #1890ff;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #f5222d;
+  --font-size-base: 14px;
+  --heading-color: rgba(0, 0, 0, 0.85);
+  --text-color: #000000a6;
+  --text-color-secondary: rgba(0, 0, 0, 0.45);
+  --disabled-color: rgba(0, 0, 0, 0.25);
+  --border-radius-base: 4px;
+  --border-color-base: #d9d9d9;
+  --box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Override Tailwind preflight styles for Ant Design compatibility */
+@layer base {
+  body{
+    font-family: 'Source Sans Pro', ui-sans-serif, system-ui;
+    margin: 0px;
+  }
+  button, [type='button'], [type='reset'], [type='submit'] {
+    background-color: var(--primary-color);
+    transition: background-color 0.3s;
+    font-weight: 700;
+    font-size: 15px;
+    height: 52px;
+  }
+
+  button[type='primary']:hover, [type='submit']:hover {
+    background-color: #335cab !important; /* Slightly darker shade of the primary color */
+  }
+
+  input{
+    font-size: 15px;
+    color: #86868B;
+  }
+  select{
+      font-size: 15px;
+      color: #86868B;
+  }
+  a{
+    color: #326AAA;
+  }
+  p{
+    color: #6E6E73;
+  }
+  hr{
+    color: #d9d9d9;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
